@@ -1,0 +1,21 @@
+@media only screen and (max-width : 767px) {
+    .hero-text {
+        margin: 16em 0 auto;
+        zoom: 0.7;
+        -moz-transform: scale(0.5);
+        width: 100%;
+    }
+
+    .round {
+        margin-left: 230px;
+    }
+
+    .text-box {
+        text-align: left;
+
+    }
+
+    .textonpic p {
+        font-size: 2em;
+    }
+}
