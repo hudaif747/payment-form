@@ -1,3 +1,11 @@
+<?php
+require_once('creds.php');
+
+// $obj = $_POST;
+// $jsonobj = json_encode($obj);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -99,6 +107,7 @@
             </div>
         </div>
     </section>
+
     <hr>
     <section id="formsection">
         <div class="container-fluid">
@@ -117,7 +126,7 @@
                             <div class="form-group">
                                 <label for="age_form">Age</label>
                                 <select id="age_form" class="form-control styled required" name="Age">
-                                    <option value=""></option>
+                                    <option value="">Select Age</option>
                                     <option value="10">10</option>
                                     <option value="11">11</option>
                                     <option value="12">12</option>
@@ -198,10 +207,32 @@
                     </div>
                     <button type="submit" id="form-submit" class="btn btn-primary subbtn">Apply</button>
                 </form>
+
+
+                <!-- <form action="javascript:phphelper(this);" method="POST">
+                    <script type="text/javascript" src="https://checkout.razorpay.com/v1/checkout.js"
+                        data-key="" Keys data-amount="50000"
+                        data-buttontext="Pay with Razorpay" data-name="Radio Islam"
+                        data-description="Course Fee for Meo Hifz by Radio Islam" data-image="images/logo.png"
+                        data-prefill.name="Gaurav Kumar" data-prefill.email="example@mail.com"
+                        data-theme.color="#F37254"></script>
+                    <input type="hidden" custom="Hidden Element" name="hidden">
+                </form> -->
             </div>
 
         </div>
     </section>
+    <section id="banner2">
+        <div class="banner2secondary">
+            <div class="container-fluid">
+                <div class="parallax">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+
     <section id="footer">
         <div class="footer">
             <div class="container-fluid">
@@ -216,12 +247,31 @@
         </div>
 
     </section>
+    <div id="popup1" class="overlay">
+        <div class="popup">
+            <h2>Registration Successfull</h2>
+            <a class="close" href="javascript:onXClick()">&times;</a>
+            <div class="content">
+                Your Payment ID is <br>
+                <span id="pid"></span>
+            </div>
+            <div class="check icon"></div>
+        </div>
+
+    </div>
 </body>
 
-<script src="
-https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.6/js/intlTelInput.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.6/js/intlTelInput.min.js"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<!-- <script
+    src="<a class='vglnk' href='https://checkout.razorpay.com/v1/checkout.js' rel='nofollow'><span>https</span><span>://</span><span>checkout</span><span>.</span><span>razorpay</span><span>.</span><span>com</span><span>/</span><span>v1</span><span>/</span><span>checkout</span><span>.</span><span>js</span></a>">
+</script> -->
+
 <script src="index.js"></script>
 <script src="js/jquery.validate.js"></script>
 <script src="js/formdata.js"></script>
+<script>
+const rzp_key = '<?php echo $razor_pay_key ?>';
+</script>
 
 </html>
